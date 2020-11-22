@@ -7,3 +7,5 @@ This program collects prices by web scraping price announcements on Booli and ou
 To try it out, just run the program and follow the instructions in the window that appears.
 
 Note that this is just a fun project with a very specific personal application - no efforts have been made to further generalise the program, but the potential is certainly there.
+
+(Currently there is only one commit, as I've been working on the project on my school github server which doesn't allow external visitors. In order to make the code public, I just uploaded the files here.)
