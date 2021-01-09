@@ -7,3 +7,8 @@ This program collects prices by web scraping price announcements on Booli and ou
 To try it out, just run the program and follow the instructions in the window that appears. The program is suited for searches in the Östermalm area, but one can easily set up one's own filter on Booli's page, then simply paste the URL into the designated field. Please note that it only works for apartments!
 
 Note that this is just a fun project with a very specific personal application - no efforts have been made to further generalise the program, but the potential is certainly there. 
+
+Example search:
+![alt text](https://github.com/aharting/Property-data/blob/main/Ska%CC%88rmavbild%202021-01-09%20kl.%2020.02.46.png)
+![alt text](https://github.com/aharting/Property-data/blob/main/Ska%CC%88rmavbild%202021-01-09%20kl.%2020.02.30.png)
+
