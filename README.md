@@ -9,6 +9,7 @@ To try it out, just run the program and follow the instructions in the window th
 Note that this is just a fun project with a very specific personal application - no efforts have been made to further generalise the program, but the potential is certainly there. 
 
 Example search:
+
 ![alt text](https://github.com/aharting/Property-data/blob/main/Ska%CC%88rmavbild%202021-01-09%20kl.%2020.02.46.png)
 ![alt text](https://github.com/aharting/Property-data/blob/main/Ska%CC%88rmavbild%202021-01-09%20kl.%2020.02.30.png)
 
