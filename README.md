@@ -39,3 +39,7 @@ Paste the URL into the application
 Application output
 
 ![Application output](https://github.com/aharting/Property-data/blob/main/Example_pictures_Booli_URL_input/Example_Booli_output_hoverpoint2.png)
+
+### Requirements
+- Python 3.12.2
+- bs4 4.12.3, requests 2.31.0, matplotlib 3.8.4, numpy 1.26.4, seaborn 0.13.2, pandas 2.2.1

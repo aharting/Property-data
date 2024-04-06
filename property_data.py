@@ -17,7 +17,7 @@ class Gui:
         self.minSoldDate="2023-01-01"
         self.maxSoldDate = str(datetime.datetime.today())[:11]
         self.kde=False
-        self.data= {"address":[],"rooms":[],"sqm":[],"price":[],"sqmprice":[],"date":[]}
+        self.data= {"address":[],"rooms":[], "floor":[], "sqm":[],"price":[],"sqmprice":[],"date":[]}
         self.dct={
             "no": {
                 "txt":"nedre+ostermalm",
@@ -42,7 +42,7 @@ class Gui:
         url += f"{txts}/{codes}/?"
         if self.area[1] is not None:
             url+= f"maxLivingArea={self.area[1]}"
-        url += f"&minLivingArea={self.area[0]}&objectType=L%C3%A4genhet"
+        url += f"&minLivingArea={self.area[0]}&objectType=Lagenhet"
 
         if page is not None:
             url+= f"&page={page}"
@@ -79,27 +79,31 @@ class Gui:
     def filter(self,soup):
         """Scans the HTML code for sales data, stores in object attributes"""
         property_listings = soup.find_all('article', class_='relative')
-
         # Iterate through the property listings and extract information
         for listing in property_listings:
             property_name = listing.find('a', class_='expanded-link').text
             date = listing.find('span', class_='text-bui-color-middle-dark').text
-            price = listing.find('p', class_='heading-3').text.strip()
+            price = listing.find('span', class_='heading-3 box-content').text.strip()
             details = [item.text for item in listing.find_all('li', class_='mr-4')]
             try:
-                rooms = re.findall(r'(\d+½?) rum', ",".join(details))[0]
+                rooms = re.findall(r'(\d+½?)\xa0rum', ",".join(details))[0]
             except:
                 rooms = "NaN"
             try:
-                sqm = re.findall(r'(\d+) m²', ",".join(details))[0]
+                floor = re.findall(r'vån\xa0(\d+½?)', ",".join(details))[0]
+            except:
+                floor = "NaN"
+            try:
+                sqm = re.findall(r'(\d+)\xa0m²', ",".join(details))[0]
             except:
                 sqm = "NaN"
             try:
-                sqmprice = int(int(re.sub(r'\s|kr', '', price))/int(re.findall(r'(\d+) m²', ",".join(details))[0]))
+                sqmprice = int(int(re.sub(r'\s|kr', '', price))/int(sqm))
             except:
                 sqmprice = "NaN"
             self.data["address"].append(property_name)
             self.data["rooms"].append(rooms)
+            self.data["floor"].append(floor)
             self.data["sqm"].append(sqm)
             self.data["sqmprice"].append(sqmprice)
             self.data["price"].append(re.sub(r'kr', '', price))
@@ -167,7 +171,7 @@ class Gui:
                 index_x+=1
             text = f"""{self.data['address'][index_x]}
 {self.data['price'][index_x]} kr
-{self.data['rooms'][index_x]} rum, {self.data['sqm'][index_x]} m² 
+{self.data['rooms'][index_x]} rum, {self.data['sqm'][index_x]} m², vån {self.data['floor'][index_x]} 
 {self.data['sqmprice'][index_x]} kr/m²
 {datetime.date.fromordinal(x[index_x])}"""
 
@@ -359,7 +363,7 @@ class Gui:
                 self.getDataURL(optURL.get())
             f = open('property_data.txt', 'w')
             for i in range(len(self.data['address'])):
-                line = f"{self.data['address'][i]}, {self.data['price'][i]} kr, {self.data['rooms'][i]} rum, {self.data['sqm'][i]} m², {self.data['sqmprice'][i]} kr/m², {datetime.date.fromordinal(self.data['date'][i])} \n"
+                line = f"{self.data['address'][i]}, {self.data['price'][i]} kr, vån {self.data['floor'][i]}, {self.data['rooms'][i]} rum, {self.data['sqm'][i]} m², {self.data['sqmprice'][i]} kr/m², {datetime.date.fromordinal(self.data['date'][i])} \n"
                 f.write(line)
             f.close()
             self.__init__()
@@ -393,7 +397,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-    #app=Gui()
-    #app.getData()
-    # app.kde=True
-    # app.plot()

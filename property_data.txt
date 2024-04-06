@@ -1,61 +1,93 @@
-Grevgatan 25A, 3 100 000Â  kr, 1 rum, 29 mÂ², 106896 kr/mÂ², 2023-10-28 
-Styrmansgatan 16B, 3 250 000Â  kr, 1 rum, 26 mÂ², 125000 kr/mÂ², 2023-10-25 
-Brahegatan 28, 3 050 000Â  kr, 1 rum, 23 mÂ², 132608 kr/mÂ², 2023-10-23 
-ValhallavÃ¤gen 172, 3 375 000Â  kr, 1 rum, 26 mÂ², 129807 kr/mÂ², 2023-10-18 
-KarlavÃ¤gen 54, 3 230 000Â  kr, 1 rum, 28 mÂ², 115357 kr/mÂ², 2023-10-16 
-Nybrogatan 87A, 3 625 000Â  kr, 1 rum, 27 mÂ², 134259 kr/mÂ², 2023-10-13 
-Artillerigatan 33, 2 910 000Â  kr, 1 rum, 24 mÂ², 121250 kr/mÂ², 2023-10-09 
-Nybrogatan 50, 3 230 000Â  kr, 1 rum, 25 mÂ², 129200 kr/mÂ², 2023-10-06 
-Grevgatan 19, 3 560 000Â  kr, 1 rum, 24 mÂ², 148333 kr/mÂ², 2023-09-26 
-ValhallavÃ¤gen 148B, 3 180 000Â  kr, 1 rum, 26 mÂ², 122307 kr/mÂ², 2023-09-24 
-Skeppargatan 52A, 3 900 000Â  kr, 1 rum, 29 mÂ², 134482 kr/mÂ², 2023-09-20 
-Nybrogatan 77, 3 300 000Â  kr, 1 rum, 24 mÂ², 137500 kr/mÂ², 2023-09-17 
-Grev Turegatan 64, 3 500 000Â  kr, 1 rum, 29 mÂ², 120689 kr/mÂ², 2023-09-16 
-Nybrogatan 50, 3 350 000Â  kr, 1 rum, 25 mÂ², 134000 kr/mÂ², 2023-09-15 
-KommendÃ¶rsgatan 33A, 3 450 000Â  kr, 1 rum, 29 mÂ², 118965 kr/mÂ², 2023-09-07 
-BanÃ©rgatan 41, 3 550 000Â  kr, 1 rum, 23 mÂ², 154347 kr/mÂ², 2023-09-06 
-LinnÃ©gatan 20, 3 500 000Â  kr, 1 rum, 29 mÂ², 120689 kr/mÂ², 2023-09-05 
-Styrmansgatan 24, 3 210 000Â  kr, 1 rum, 27 mÂ², 118888 kr/mÂ², 2023-08-31 
-Sibyllegatan 11, 3 200 000Â  kr, 1 rum, 22 mÂ², 145454 kr/mÂ², 2023-08-23 
-ValhallavÃ¤gen 134, 3 200 000Â  kr, 1 rum, 23 mÂ², 139130 kr/mÂ², 2023-08-15 
-Jungfrugatan 52, 3 050 000Â  kr, 1 rum, 21 mÂ², 145238 kr/mÂ², 2023-08-10 
-Brahegatan 58, 3 050 000Â  kr, 1 rum, 22 mÂ², 138636 kr/mÂ², 2023-08-09 
-Wittstocksgatan 19, 1 205 063Â  kr, 1 rum, 14 mÂ², 86075 kr/mÂ², 2023-08-04 
-Oxenstiernsgatan 35, 3 000 000Â  kr, 1 rum, 23 mÂ², 130434 kr/mÂ², 2023-07-20 
-Skeppargatan 11, 3 350 000Â  kr, 1 rum, 24 mÂ², 139583 kr/mÂ², 2023-07-19 
-KommendÃ¶rsgatan 33A, 3 900 000Â  kr, 1 rum, 28 mÂ², 139285 kr/mÂ², 2023-07-19 
-KommendÃ¶rsgatan 33A, 3 700 000Â  kr, 1 rum, 24 mÂ², 154166 kr/mÂ², 2023-07-05 
-ValhallavÃ¤gen 148C, 2 950 000Â  kr, 1 rum, 17 mÂ², 173529 kr/mÂ², 2023-06-21 
-Grev Magnigatan 10, 2 350 000Â  kr, 1 rum, 18 mÂ², 130555 kr/mÂ², 2023-06-14 
-Grev Magnigatan 10, 2 350 000Â  kr, 1 rum, 18 mÂ², 130555 kr/mÂ², 2023-06-14 
-Storgatan 48, 3 550 000Â  kr, 1Â½ rum, 30 mÂ², 118333 kr/mÂ², 2023-06-02 
-Gumshornsgatan 5, 2 995 000Â  kr, 1 rum, 22 mÂ², 136136 kr/mÂ², 2023-06-01 
-KarlavÃ¤gen 52, 3 725 000Â  kr, 1 rum, 26 mÂ², 143269 kr/mÂ², 2023-05-23 
-KarlavÃ¤gen 52, 3 800 000Â  kr, 1 rum, 26 mÂ², 146153 kr/mÂ², 2023-05-16 
-KommendÃ¶rsgatan 33A, 3 575 000Â  kr, 1 rum, 30 mÂ², 119166 kr/mÂ², 2023-05-11 
-Styrmansgatan 13, 3 380 000Â  kr, 1 rum, 27 mÂ², 125185 kr/mÂ², 2023-05-10 
-KarlavÃ¤gen 52, 3 475 000Â  kr, 1 rum, 26 mÂ², 133653 kr/mÂ², 2023-05-04 
-Styrmansgatan 13, 2 450 000Â  kr, 1 rum, 15 mÂ², 163333 kr/mÂ², 2023-05-03 
-Grevgatan 20, 3 600 000Â  kr, 1 rum, 26 mÂ², 138461 kr/mÂ², 2023-03-27 
-Sibyllegatan 31, 3 850 000Â  kr, 1 rum, 29 mÂ², 132758 kr/mÂ², 2023-03-27 
-LinnÃ©gatan 17A, 3 210 000Â  kr, 1 rum, 26 mÂ², 123461 kr/mÂ², 2023-03-24 
-KarlavÃ¤gen 52, 2 925 000Â  kr, 1 rum, 26 mÂ², 112500 kr/mÂ², 2023-03-23 
-Styrmansgatan 16A, 3 875 000Â  kr, 1 rum, 26 mÂ², 149038 kr/mÂ², 2023-03-20 
-KarlavÃ¤gen 46A, 3 950 000Â  kr, 1 rum, 25 mÂ², 158000 kr/mÂ², 2023-03-14 
-Grevgatan 49, 3 650 000Â  kr, 1 rum, 26 mÂ², 140384 kr/mÂ², 2023-03-08 
-Grev Magnigatan 3, 4 350 000Â  kr, 1 rum, 30 mÂ², 145000 kr/mÂ², 2023-02-22 
-Karlaplan 1, 3 720 000Â  kr, 1 rum, 26 mÂ², 143076 kr/mÂ², 2023-02-22 
-Styrmansgatan 13, 3 500 000Â  kr, 1 rum, 22 mÂ², 159090 kr/mÂ², 2023-02-19 
-Artillerigatan 63, 3 500 000Â  kr, 1 rum, 28 mÂ², 125000 kr/mÂ², 2023-02-17 
-Brahegatan 12, 3 350 000Â  kr, 1 rum, 26 mÂ², 128846 kr/mÂ², 2023-02-14 
-Gumshornsgatan 11, 3 295 000Â  kr, 1 rum, 25 mÂ², 131800 kr/mÂ², 2023-02-07 
-Ã–stermalmsgatan 61, 3 550 000Â  kr, 1 rum, 26 mÂ², 136538 kr/mÂ², 2023-01-31 
-Grevgatan 51, 3 350 000Â  kr, 1 rum, 25 mÂ², 134000 kr/mÂ², 2023-01-31 
-LinnÃ©gatan 17A, 3 100 000Â  kr, 1 rum, 26 mÂ², 119230 kr/mÂ², 2023-01-28 
-ValhallavÃ¤gen 172, 3 000 000Â  kr, 1 rum, 25 mÂ², 120000 kr/mÂ², 2023-01-19 
-BanÃ©rgatan 44, 3 500 000Â  kr, 1 rum, 25 mÂ², 140000 kr/mÂ², 2023-01-16 
-BanÃ©rgatan 25A, 2 750 000Â  kr, 1 rum, 25 mÂ², 110000 kr/mÂ², 2023-01-13 
-Gyllenstiernsgatan 19, 2 600 000Â  kr, 1 rum, 19 mÂ², 136842 kr/mÂ², 2023-01-13 
-ValhallavÃ¤gen 172, 3 150 000Â  kr, 1 rum, 25 mÂ², 126000 kr/mÂ², 2023-01-11 
-ValhallavÃ¤gen 158, 2 950 000Â  kr, 1 rum, 27 mÂ², 109259 kr/mÂ², 2023-01-11 
-BanÃ©rgatan 25A, 2 700 000Â  kr, 1 rum, 25 mÂ², 108000 kr/mÂ², 2023-01-11 
+Nybrogatan 65, 4 500 000  kr, vån 5, 1 rum, 29 m², 155172 kr/m², 2024-04-01 
+Valhallavägen 148B, 3 240 000  kr, vån NaN, 1 rum, 24 m², 135000 kr/m², 2024-03-27 
+Styrmansgatan 21A, 3 170 000  kr, vån NaN, 1 rum, 21 m², 150952 kr/m², 2024-03-22 
+Karlavägen 46B, 3 550 000  kr, vån NaN, 1 rum, 26 m², 136538 kr/m², 2024-03-14 
+Torstenssonsgatan 10A, 4 350 000  kr, vån NaN, 1 rum, 28 m², 155357 kr/m², 2024-03-11 
+Grevgatan 19, 3 500 000  kr, vån 1, 1 rum, 25 m², 140000 kr/m², 2024-02-27 
+Grev Magnigatan 15, 3 895 000  kr, vån 5, 1 rum, 29 m², 134310 kr/m², 2024-02-27 
+Styrmansgatan 16B, 4 000 000  kr, vån 4, 1 rum, 24 m², 166666 kr/m², 2024-02-21 
+Grevgatan 47, 2 800 000  kr, vån 3, 1 rum, 18 m², 155555 kr/m², 2024-02-19 
+Valhallavägen 152C, 2 720 000  kr, vån NaN, 1 rum, 23 m², 118260 kr/m², 2024-02-16 
+Värtavägen 6, 2 800 000  kr, vån NaN, 1 rum, 19 m², 147368 kr/m², 2024-02-13 
+Styrmansgatan 23, 2 275 000  kr, vån NaN, 1 rum, 13 m², 175000 kr/m², 2024-02-13 
+Storgatan 32, 4 000 000  kr, vån 2, 1 rum, 27 m², 148148 kr/m², 2024-02-09 
+Östermalmsgatan 61, 3 600 000  kr, vån 3, 1 rum, 27 m², 133333 kr/m², 2024-02-06 
+Kaptensgatan 14A, 4 100 000  kr, vån 3, 1 rum, 30 m², 136666 kr/m², 2024-01-24 
+Linnégatan 90, 3 300 000  kr, vån NaN, 1 rum, 24 m², 137500 kr/m², 2024-01-23 
+Grev Turegatan 64, 3 610 000  kr, vån 1, 1 rum, 29 m², 124482 kr/m², 2024-01-19 
+Wittstocksgatan 21, 3 475 000  kr, vån 3, 1 rum, 26 m², 133653 kr/m², 2024-01-17 
+Skeppargatan 52A, 3 540 000  kr, vån NaN, 1 rum, 28 m², 126428 kr/m², 2023-12-22 
+Torstenssonsgatan 10A, 4 250 000  kr, vån 1, 1 rum, 29 m², 146551 kr/m², 2023-12-21 
+Linnégatan 104, 2 950 000  kr, vån NaN, 1 rum, 21 m², 140476 kr/m², 2023-12-16 
+Grevgatan 23B, 3 500 000  kr, vån 2, 1 rum, 25 m², 140000 kr/m², 2023-12-15 
+Nybrogatan 89, 3 030 000  kr, vån 1, 1 rum, 22 m², 137727 kr/m², 2023-12-13 
+Artillerigatan 33, 3 400 000  kr, vån NaN, 1 rum, 28 m², 121428 kr/m², 2023-12-08 
+Skeppargatan 28, 3 550 000  kr, vån 4, 1½ rum, 26 m², 136538 kr/m², 2023-12-06 
+Gyllenstiernsgatan 19, 2 600 000  kr, vån NaN, 1 rum, 20 m², 130000 kr/m², 2023-11-30 
+Kommendörsgatan 33A, 3 300 000  kr, vån 3, 1 rum, 25 m², 132000 kr/m², 2023-11-28 
+Skeppargatan 52A, 4 000 000  kr, vån 1, 1 rum, 29 m², 137931 kr/m², 2023-11-24 
+Gumshornsgatan 11, 2 975 000  kr, vån NaN, 1 rum, 25 m², 119000 kr/m², 2023-11-22 
+Linnégatan 20, 3 550 000  kr, vån 4, 1 rum, NaN m², NaN kr/m², 2023-11-20 
+Grevgatan 25A, 3 100 000  kr, vån NaN, 1 rum, 29 m², 106896 kr/m², 2023-10-28 
+Styrmansgatan 16B, 3 250 000  kr, vån NaN, 1 rum, 26 m², 125000 kr/m², 2023-10-25 
+Brahegatan 28, 3 050 000  kr, vån NaN, 1 rum, 23 m², 132608 kr/m², 2023-10-23 
+Valhallavägen 172, 3 375 000  kr, vån 4, 1 rum, 26 m², 129807 kr/m², 2023-10-18 
+Karlavägen 54, 3 230 000  kr, vån NaN, 1 rum, 28 m², 115357 kr/m², 2023-10-16 
+Nybrogatan 87A, 3 625 000  kr, vån 1, 1 rum, 27 m², 134259 kr/m², 2023-10-13 
+Artillerigatan 33, 2 910 000  kr, vån 1, 1 rum, 24 m², 121250 kr/m², 2023-10-09 
+Nybrogatan 50, 3 230 000  kr, vån 4, 1 rum, 25 m², 129200 kr/m², 2023-10-06 
+Grevgatan 19, 3 560 000  kr, vån 3, 1 rum, 24 m², 148333 kr/m², 2023-09-26 
+Valhallavägen 148B, 3 180 000  kr, vån 1, 1 rum, 26 m², 122307 kr/m², 2023-09-24 
+Skeppargatan 52A, 3 900 000  kr, vån 3, 1 rum, 29 m², 134482 kr/m², 2023-09-20 
+Nybrogatan 77, 3 300 000  kr, vån 1, 1 rum, 24 m², 137500 kr/m², 2023-09-17 
+Grev Turegatan 64, 3 500 000  kr, vån 3, 1 rum, 29 m², 120689 kr/m², 2023-09-16 
+Nybrogatan 50, 3 350 000  kr, vån 6, 1 rum, 25 m², 134000 kr/m², 2023-09-15 
+Kommendörsgatan 33A, 3 450 000  kr, vån NaN, 1 rum, 29 m², 118965 kr/m², 2023-09-07 
+Banérgatan 41, 3 550 000  kr, vån 5, 1 rum, 23 m², 154347 kr/m², 2023-09-06 
+Linnégatan 20, 3 500 000  kr, vån 2, 1 rum, 29 m², 120689 kr/m², 2023-09-05 
+Styrmansgatan 24, 3 210 000  kr, vån NaN, 1 rum, 27 m², 118888 kr/m², 2023-08-31 
+Sibyllegatan 11, 3 200 000  kr, vån 2, 1 rum, 22 m², 145454 kr/m², 2023-08-23 
+Valhallavägen 134, 3 200 000  kr, vån 5, 1 rum, 23 m², 139130 kr/m², 2023-08-15 
+Jungfrugatan 52, 3 050 000  kr, vån NaN, 1 rum, 21 m², 145238 kr/m², 2023-08-10 
+Brahegatan 58, 3 050 000  kr, vån 3, 1 rum, 22 m², 138636 kr/m², 2023-08-09 
+Wittstocksgatan 19, 1 205 063  kr, vån NaN, 1 rum, 14 m², 86075 kr/m², 2023-08-04 
+Oxenstiernsgatan 35, 3 000 000  kr, vån NaN, 1 rum, 23 m², 130434 kr/m², 2023-07-20 
+Skeppargatan 11, 3 350 000  kr, vån 2, 1 rum, 24 m², 139583 kr/m², 2023-07-19 
+Kommendörsgatan 33A, 3 900 000  kr, vån 2, 1 rum, 28 m², 139285 kr/m², 2023-07-19 
+Kommendörsgatan 33A, 3 700 000  kr, vån 3, 1 rum, 24 m², 154166 kr/m², 2023-07-05 
+Valhallavägen 148C, 2 950 000  kr, vån 1, 1 rum, 17 m², 173529 kr/m², 2023-06-21 
+Grev Magnigatan 10, 2 350 000  kr, vån 4, 1 rum, 18 m², 130555 kr/m², 2023-06-14 
+Grev Magnigatan 10, 2 350 000  kr, vån 4, 1 rum, 18 m², 130555 kr/m², 2023-06-14 
+Storgatan 48, 3 550 000  kr, vån NaN, 1½ rum, 30 m², 118333 kr/m², 2023-06-02 
+Gumshornsgatan 5, 2 995 000  kr, vån 4, 1 rum, 22 m², 136136 kr/m², 2023-06-01 
+Karlavägen 52, 3 725 000  kr, vån 2, 1 rum, 26 m², 143269 kr/m², 2023-05-23 
+Karlavägen 52, 3 800 000  kr, vån 3, 1 rum, 26 m², 146153 kr/m², 2023-05-16 
+Kommendörsgatan 33A, 3 575 000  kr, vån 4, 1 rum, 30 m², 119166 kr/m², 2023-05-11 
+Styrmansgatan 13, 3 380 000  kr, vån 1, 1 rum, 27 m², 125185 kr/m², 2023-05-10 
+Karlavägen 52, 3 475 000  kr, vån 3, 1 rum, 26 m², 133653 kr/m², 2023-05-04 
+Brahegatan 7B, 4 150 000  kr, vån NaN, 2 rum, 28 m², 148214 kr/m², 2023-05-04 
+Styrmansgatan 13, 2 450 000  kr, vån 2, 1 rum, 15 m², 163333 kr/m², 2023-05-03 
+Grevgatan 20, 3 600 000  kr, vån 2, 1 rum, 26 m², 138461 kr/m², 2023-03-27 
+Sibyllegatan 31, 3 850 000  kr, vån 4, 1 rum, 29 m², 132758 kr/m², 2023-03-27 
+Linnégatan 17A, 3 210 000  kr, vån 2, 1 rum, 26 m², 123461 kr/m², 2023-03-24 
+Karlavägen 52, 2 925 000  kr, vån 1, 1 rum, 26 m², 112500 kr/m², 2023-03-23 
+Styrmansgatan 16A, 3 875 000  kr, vån 3, 1 rum, 26 m², 149038 kr/m², 2023-03-20 
+Karlavägen 46A, 3 950 000  kr, vån 1, 1 rum, 25 m², 158000 kr/m², 2023-03-14 
+Grevgatan 49, 3 650 000  kr, vån 4, 1 rum, 26 m², 140384 kr/m², 2023-03-08 
+Grev Magnigatan 3, 4 350 000  kr, vån 1, 1 rum, 30 m², 145000 kr/m², 2023-02-22 
+Karlaplan 1, 3 720 000  kr, vån 4, 1 rum, 26 m², 143076 kr/m², 2023-02-22 
+Storgatan 32, 3 825 000  kr, vån 3, 2 rum, 25 m², 153000 kr/m², 2023-02-21 
+Styrmansgatan 13, 3 500 000  kr, vån 2, 1 rum, 22 m², 159090 kr/m², 2023-02-19 
+Artillerigatan 63, 3 500 000  kr, vån NaN, 1 rum, 28 m², 125000 kr/m², 2023-02-17 
+Brahegatan 12, 3 350 000  kr, vån 4, 1 rum, 26 m², 128846 kr/m², 2023-02-14 
+Gumshornsgatan 11, 3 295 000  kr, vån 4, 1 rum, 25 m², 131800 kr/m², 2023-02-07 
+Östermalmsgatan 61, 3 550 000  kr, vån 1, 1 rum, 26 m², 136538 kr/m², 2023-01-31 
+Grevgatan 51, 3 350 000  kr, vån 2, 1 rum, 25 m², 134000 kr/m², 2023-01-31 
+Linnégatan 17A, 3 100 000  kr, vån 2, 1 rum, 26 m², 119230 kr/m², 2023-01-28 
+Valhallavägen 172, 3 000 000  kr, vån 3, 1 rum, 25 m², 120000 kr/m², 2023-01-19 
+Banérgatan 44, 3 500 000  kr, vån 4½, 1 rum, 25 m², 140000 kr/m², 2023-01-16 
+Banérgatan 25A, 2 750 000  kr, vån 1, 1 rum, 25 m², 110000 kr/m², 2023-01-13 
+Gyllenstiernsgatan 19, 2 600 000  kr, vån 3, 1 rum, 19 m², 136842 kr/m², 2023-01-13 
+Valhallavägen 172, 3 150 000  kr, vån 5, 1 rum, 25 m², 126000 kr/m², 2023-01-11 
+Valhallavägen 158, 2 950 000  kr, vån NaN, 1 rum, 27 m², 109259 kr/m², 2023-01-11 
+Banérgatan 25A, 2 700 000  kr, vån NaN, 1 rum, 25 m², 108000 kr/m², 2023-01-11 
