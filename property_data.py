@@ -5,67 +5,69 @@ import matplotlib.pyplot as plt
 import numpy as np
 import datetime
 import webbrowser
+import re
+import seaborn as sns
+import pandas as pd
 
 class Gui:
     def __init__(self):
         self.areas={"no":True,"oo":True,"mo":True}
         self.area=[10,30]
         self.rooms=[1,2]
-        self.minSoldDate="2015-01-01"
+        self.minSoldDate="2023-01-01"
         self.maxSoldDate = str(datetime.datetime.today())[:11]
-        self.data= {"address":[],"rooms":[],"sqm":[],"price":[],"priceSqm":[],"date":[]}
-
-    def restart(self):
-        """Clears the attributes"""
-        self.areas={"no":True,"oo":False,"mo":False}
-        self.area=[10,30]
-        self.rooms=[0,2]
-        self.minSoldDate="2015-01-01"
-        self.maxSoldDate = str(datetime.datetime.today())[:11]
-        self.data= {"address":[],"rooms":[],"sqm":[],"price":[],"priceSqm":[],"date":[]}
+        self.kde=False
+        self.data= {"address":[],"rooms":[],"sqm":[],"price":[],"sqmprice":[],"date":[]}
+        self.dct={
+            "no": {
+                "txt":"nedre+ostermalm",
+                "code":"874673",
+                "name":"Nedre Östermalm"
+            }, "mo": {
+                "txt":"mellersta+ostermalm",
+                "code":"874671",
+                "name":"Mellersta Östermalm"
+            }, "oo": {
+                "txt":"ovre+ostermalm",
+                "code":"874674",
+                "name":"Övre Östermalm"
+            }
+        }
 
     def url(self,page=None):
         """Gets proper URL for data collection given GUI input data"""
-        areaText =[]
-        areaCode = []
-
         url = "https://www.booli.se/slutpriser/"
-        if self.areas["no"] == True:
-            areaText.append("nedre+ostermalm")
-            areaCode.append("874673")
-        if self.areas["mo"] == True:
-            areaText.append("mellersta+ostermalm")
-            areaCode.append("874671")
-        if self.areas["oo"] == True:
-            areaText.append("ovre+ostermalm")
-            areaCode.append("874674")
-        areaText=",".join(areaText)
-        areaCode=",".join(areaCode)
-        url += areaText + "/" + areaCode + "/?"
+        txts=",".join([self.dct[key]['txt'] for key in self.areas.keys() if key])
+        codes=",".join([self.dct[key]['code'] for key in self.areas.keys() if key])
+        url += f"{txts}/{codes}/?"
         if self.area[1] is not None:
-            url+= "maxLivingArea=" + str(self.area[1])
-        url += "&minLivingArea=" + str(self.area[0]) + "&objectType=L%C3%A4genhet"
+            url+= f"maxLivingArea={self.area[1]}"
+        url += f"&minLivingArea={self.area[0]}&objectType=L%C3%A4genhet"
 
         if page is not None:
-            url+= "&page=" + str(page)
+            url+= f"&page={page}"
 
-        url += "&rooms=" + str(self.rooms[0])
-        rooms = ""
-        for i in range(self.rooms[0]+1, self.rooms[1]+1):
-            rooms += "%2C"+str(i)
-        url+= rooms + "&" + "minSoldDate=" + self.minSoldDate  + "&maxSoldDate=" + self.maxSoldDate
-        url+="&sort=soldDate"
+        url += f"&rooms={self.rooms[0]}"
+        rooms="".join([f"%2C{i+1}" for i in range(self.rooms[0], self.rooms[1])])
+        url+= f"{rooms}&minSoldDate={self.minSoldDate}&maxSoldDate={self.maxSoldDate}&sort=soldDate"
         return url
 
     def navigate(self,URL):
         """Creates soup object with HTML code"""
+        print(URL)
         page = requests.get(URL)
         soup = BeautifulSoup(page.content, 'html.parser')
         return soup
 
     def nbrItems(self,soup):
         """Retrieves how many items are to be collected in total, across all pages"""
-        nbr = int(soup.find(class_="EuKIv _36W0F").text.split(" ")[-1])
+        retrieved = re.findall(r'\b(\d{1,3}(?:\s?\d{3})*)(?=\s|$)\b', soup.find(class_="inline tabular-nums lining-nums mr-1").text)
+        try:
+            nbr = int(re.sub(r'\s', '', retrieved[0]))
+        except:
+            print(soup.find(class_="inline tabular-nums lining-nums mr-1").text)
+            print(retrieved)
+            raise Exception
         return nbr
 
     def dateOrdinal(self,date):
@@ -76,19 +78,32 @@ class Gui:
 
     def filter(self,soup):
         """Scans the HTML code for sales data, stores in object attributes"""
-        aptClass = "pnQPJ"
-        addressClass = 'w9WmR mPmHV'
-        areaClass = "_3f7tk _36W0F MJN7s _2wUYk"
-        priceClass = '_3jVNK _36W0F _2q4-- _4ym7M'
+        property_listings = soup.find_all('article', class_='relative')
 
-        apts = soup.find_all(class_=aptClass)
-        for apt in apts:
-            self.data["address"].append(apt.find(class_= addressClass).text)
-            self.data["rooms"].append(apt.find(class_=areaClass).find('p').text.split(", ")[0])
-            self.data["sqm"].append(apt.find(class_=areaClass).find('p').text.split(", ")[1])
-            self.data["price"].append(apt.find(class_=priceClass).find('h4').text)
-            self.data["priceSqm"].append(int("".join(apt.find(class_=priceClass).find_all('p')[0].text.split(" kr/")[0].split(" "))))
-            self.data["date"].append(self.dateOrdinal(apt.find(class_=priceClass).find_all('p')[1].text))
+        # Iterate through the property listings and extract information
+        for listing in property_listings:
+            property_name = listing.find('a', class_='expanded-link').text
+            date = listing.find('span', class_='text-bui-color-middle-dark').text
+            price = listing.find('p', class_='heading-3').text.strip()
+            details = [item.text for item in listing.find_all('li', class_='mr-4')]
+            try:
+                rooms = re.findall(r'(\d+½?) rum', ",".join(details))[0]
+            except:
+                rooms = "NaN"
+            try:
+                sqm = re.findall(r'(\d+) m²', ",".join(details))[0]
+            except:
+                sqm = "NaN"
+            try:
+                sqmprice = int(int(re.sub(r'\s|kr', '', price))/int(re.findall(r'(\d+) m²', ",".join(details))[0]))
+            except:
+                sqmprice = "NaN"
+            self.data["address"].append(property_name)
+            self.data["rooms"].append(rooms)
+            self.data["sqm"].append(sqm)
+            self.data["sqmprice"].append(sqmprice)
+            self.data["price"].append(re.sub(r'kr', '', price))
+            self.data["date"].append(self.dateOrdinal(date))
         return
 
 
@@ -97,14 +112,16 @@ class Gui:
         soup = self.navigate(self.url())
         self.filter(soup)
         page = 1
-        items = 0
+        items = len(self.data["address"])
         nbrApts = self.nbrItems(soup) #number of apartments
         while items < nbrApts:
             page +=1
             nexturl = self.url(page)
             self.filter(self.navigate(nexturl))
             items = len(self.data["address"])
-        assert len(self.data["address"]) == nbrApts
+        if len(self.data["address"]) != nbrApts:
+            print(f"{nbrApts}, {len(self.data['address'])}")
+            raise Exception
         return
 
     def getDataURL(self,optURL):
@@ -117,18 +134,25 @@ class Gui:
         splitted = optURL.split("genhet")
         while items < nbrApts:
             page += 1
-            ext = "genhet" + "&page=" + str(page)
+            ext = f"genhet&page={page}"
             nexturl = ext.join(splitted)
             self.filter(self.navigate(nexturl))
             items = len(self.data["address"])
-        assert len(self.data["address"]) == nbrApts
+        if len(self.data["address"]) != nbrApts:
+            print(f"{nbrApts}, {len(self.data['address'])}")
+            raise Exception
         return
 
     def plot(self,optURL=False):
         """Plots sqm price by date of sale with annotations of additional information of the property sale"""
-        y=self.data["priceSqm"]
-        x=self.data["date"]
+        if self.kde:
+            data=pd.DataFrame(self.data)[['date','sqmprice']]
+            sns.relplot(x="date", y="sqmprice", kind="line", data=data)
+            plt.show()
+            return
 
+        x=self.data["date"]
+        y=self.data["sqmprice"]
         fig,ax = plt.subplots()
         canvas = plt.scatter(x, y)
 
@@ -141,7 +165,12 @@ class Gui:
             index_x=x.index(pos[0])
             while y[index_x] != pos[1]:
                 index_x+=1
-            text = self.data["address"][index_x]+ "\n" + self.data["price"][index_x]+"\n" + self.data["rooms"][index_x] + ", " + self.data["sqm"][index_x] + "\n" + str(self.data["priceSqm"][index_x]) + " kr/m²" + "\n" + str(datetime.date.fromordinal(x[index_x]))
+            text = f"""{self.data['address'][index_x]}
+{self.data['price'][index_x]} kr
+{self.data['rooms'][index_x]} rum, {self.data['sqm'][index_x]} m² 
+{self.data['sqmprice'][index_x]} kr/m²
+{datetime.date.fromordinal(x[index_x])}"""
+
             annot.set_text(text)
             annot.get_bbox_patch().set_facecolor("w")
 
@@ -161,18 +190,20 @@ class Gui:
         fig.canvas.mpl_connect("motion_notify_event", hover)
 
         #Reference lines
-        trend = np.polyfit(x, y, 5)
-        trendpoly = np.poly1d(trend)
-        plt.plot(x, trendpoly(x), "r")
-        #plt.axhline(y=105385, color='g', linestyle='-') #Referens kvm pris
+        #trend = np.polyfit(x, y, 3)
+        #trendpoly = np.poly1d(trend)
+        #plt.plot(x, trendpoly(x), "r")
+        #plt.axhline(y=146000, color='g', linestyle='-') #Referens kvm pris
+        plt.axhline(y=105385, color='g', linestyle='-') #Referens kvm pris
         plt.plot()
 
         #Axis
         first = int(str(datetime.date.fromordinal(min(x))).split("-")[0])
-        ticks = [datetime.date(y, 1, 1).toordinal() for y in range(first,2022)]
-        plt.xticks(ticks, range(first,2022))
+        last = int(str(datetime.date.fromordinal(max(x))).split("-")[0])
+        ticks = [datetime.date(y, 1, 1).toordinal() for y in range(first,last+1)]
+        plt.xticks(ticks, range(first,last+1))
 
-        if optURL == False:
+        if not optURL:
             #Textbox with input data
             textstr = ""
             if self.areas["no"]:
@@ -291,6 +322,7 @@ class Gui:
             self.rooms = [int(minRoomEnter.get()), int(maxRoomEnter.get())]
             self.minSoldDate = minSoldDateEnter.get()
             self.maxSoldDate = maxSoldDateEnter.get()
+            self.kde = kde_state.get()
 
         def plotta():
             """Collects the data and creates a sqm price by sales date plot with trendline and annotations incluing additional information about the sale"""
@@ -301,7 +333,7 @@ class Gui:
             else:
                 self.getDataURL(optURL.get())
                 self.plot(optURL=True)
-            self.restart()
+            self.__init__()
 
         def displayUrl():
             """Constructs a URL from the user input and displays it as a link in a new window"""
@@ -315,7 +347,7 @@ class Gui:
             link1 = Label(urlwindow, text="Länk", fg="blue", cursor="hand2")
             link1.grid(column=0, row=4)
             link1.bind("<Button-1>",lambda e: callback(url))
-            self.restart()
+            self.__init__()
             urlwindow.mainloop()
 
         def write():
@@ -327,15 +359,23 @@ class Gui:
                 self.getDataURL(optURL.get())
             f = open('property_data.txt', 'w')
             for i in range(len(self.data['address'])):
-                line = self.data['address'][i] + ", " + self.data['price'][i] + ", " + self.data['rooms'][i] + ", " + self.data['sqm'][i] + ", " + str(self.data['priceSqm'][i]) + " kr/m², " + str(datetime.date.fromordinal(self.data['date'][i]))+'\n'
+                line = f"{self.data['address'][i]}, {self.data['price'][i]} kr, {self.data['rooms'][i]} rum, {self.data['sqm'][i]} m², {self.data['sqmprice'][i]} kr/m², {datetime.date.fromordinal(self.data['date'][i])} \n"
                 f.write(line)
             f.close()
-            self.restart()
+            self.__init__()
             return
 
         doPlot = Button(window, text="Visa graf", command=plotta, width=10)
 
         doPlot.grid(column=0, row=6)
+
+        kde_state = BooleanVar()
+
+        kde_state.set(False)  # set check state
+
+        kde = Checkbutton(window, text='KDE', var=kde_state)
+
+        kde.grid(column=1, row=6)
 
         doUrl = Button(window, text="Hämta url", command=displayUrl, width=10)
 
@@ -351,5 +391,9 @@ def main():
     app=Gui()
     app.gui()
 
-if __name__ == '__main__': main()
-
+if __name__ == '__main__':
+    main()
+    #app=Gui()
+    #app.getData()
+    # app.kde=True
+    # app.plot()
